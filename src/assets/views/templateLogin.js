@@ -12,7 +12,7 @@ export const templateLogin = () => {
 //creamos div que contendrá el plantilla
 const containerLogin = document.createElement ('div');
 const contentLogin = `<p>Login con Google</p>
-                    <button id= "login">Loguearlo</button>`;
+                    <button id= "login">Loguearlo</button>`;//aqui muestro el codigo para que se vea mi pantalla
 
 //pasar el contenido al div
 containerLogin.innerHTML = contentLogin;

@@ -3,9 +3,9 @@ import {createAccount} from './../js/auth.js';
 
 export const templateCreate = () => {
     //creamos div que contendrá el plantilla
-    const containerCreate = document.createElement ('div');
-    const contentCreate = `<p>Crea una cuenta</p>
-                          <button id ="create">Loguearlo</button>`;
+    const containerCreate = document.createElement('div');
+    const contentCreate = `<p>Crear cuenta</p>
+                          <button id="create">Crear cuenta</button>`;
     
     //pasar el contenido al div
     containerCreate.innerHTML = contentCreate;
