@@ -15,7 +15,7 @@ const contentLogin = `<p>Login con Google</p>
                     <button id= "login">Loguearlo</button>`;
 
 //pasar el contenido al div
-containerLogin.innerHTML = containerLogin;
+containerLogin.innerHTML = contentLogin;
 const btn = containerLogin.querySelector('#login'); // que busque el id que tiene este #login, es pra que busque lo que yo quiero que busque, aun que no sea documento, hasta en hijoss
 
 //evento del botón que llama a la autentificacióndel google.
