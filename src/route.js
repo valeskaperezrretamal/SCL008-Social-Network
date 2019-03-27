@@ -18,7 +18,7 @@ const changeRouter =(hash) => {
 //imprimirá el template en html
 const showTemplate = (hash) => {
 const router = hash.substring(2); //para que saque el # y tome solo login no #login
-containerRoot = document.getElementById('root');
+const containerRoot = document.getElementById('root');
 containerRoot.innerHTML= "";
 
 //hacemos match del hash utilizado y el template que quiero mostar
