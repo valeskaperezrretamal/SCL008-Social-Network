@@ -12,10 +12,10 @@ export const templateLogin = () => {
 //creamos div que contendrá el plantilla
 const containerLogin = document.createElement ('div');
 const contentLogin = `<p>Login con Google</p>
-                    <button id= "login">Loguearlo</button>`;
+                    <button id= "login">Loguearlo</button>`;//aqui muestro el codigo para que se vea mi pantalla
 
 //pasar el contenido al div
-containerLogin.innerHTML = containerLogin;
+containerLogin.innerHTML = contentLogin;
 const btn = containerLogin.querySelector('#login'); // que busque el id que tiene este #login, es pra que busque lo que yo quiero que busque, aun que no sea documento, hasta en hijoss
 
 //evento del botón que llama a la autentificacióndel google.

@@ -1,5 +1,5 @@
 import {templateLogin} from './assets/views/templateLogin.js';
-import{templateCreate} from './assert/views/templateCreate.js';
+import{templateCreate} from './assets/views/templateCreate.js';
 
 /*
 crear una función que reciba el hash (#) y segu n el match o la cooincidencia retorne otra 
