@@ -1,2 +1,10 @@
 //inicialización firebase
-//llamado a las rutas
+//llamado a la inicialización de la rutas
+
+import {initRouter} from './route.js';
+
+const init = () => {
+    initRouter();
+
+}
+window.addEventListener('load', init);
