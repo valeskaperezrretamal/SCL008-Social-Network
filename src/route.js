@@ -1,8 +1,8 @@
-import {templateLogin} from './assets/views/templateLogin.js';
+import {templateLogin} from './assets/views/templateLogin.js';//aqui llamo los archivos
 import{templateCreate} from './assets/views/templateCreate.js';
 
 /*
-crear una función que reciba el hash (#) y segu n el match o la cooincidencia retorne otra 
+crear una función que reciba el hash (#) y segun el match o la cooincidencia retorne otra 
 función que se va a encargar de imprimir el template en nuestro html
 */
 
@@ -22,6 +22,7 @@ const containerRoot = document.getElementById('root');
 containerRoot.innerHTML= "";
 
 //hacemos match del hash utilizado y el template que quiero mostar
+// aqui podemos poner la cantidad de casos que nosotras queramos
 switch (router){
     case 'login':
     containerRoot.appendChild(templateLogin());
@@ -37,7 +38,7 @@ switch (router){
 
 
  export const initRouter = () =>{ 
-    window.addEventListener('load', changeRouter // le poedimos que escuche una "carga" osea una vez que se carge  y como parametro le pasamos el # que tenga como evento una vez que se cargo la pagina 
+    window.addEventListener('load', changeRouter // le pedimos que escuche una "carga" osea una vez que se carge  y como parametro le pasamos el # que tenga como evento una vez que se cargo la pagina 
         (window.location.hash));
 
         //reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
