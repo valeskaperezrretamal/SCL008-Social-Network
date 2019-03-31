@@ -10,7 +10,7 @@ const changeRouter =(hash) => {
     if(hash === '#/login'){
         return showTemplate(hash);
     }
-    if (hash == '#/create'){
+    if (hash === '#/create'){
         return showTemplate(hash);
     }
 }
