@@ -1,3 +1,14 @@
 .logo,.imagen{
 text-align: center;
 }
+body{
+background: rgb(158, 224, 158);
+}
+    
+.logo,.login,.create,.container{
+text-align: center;
+}
+*{
+margin: 0%;
+padding: 0%;
+}
