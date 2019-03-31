@@ -38,8 +38,9 @@ switch (router){
 
 
  export const initRouter = () =>{ 
-    window.addEventListener('load', changeRouter // le pedimos que escuche una "carga" osea una vez que se carge  y como parametro le pasamos el # que tenga como evento una vez que se cargo la pagina 
-        (window.location.hash));
+    window.addEventListener('load', changeRouter(window.location.hash));
+     // le pedimos que escuche una "carga" osea una vez que se carge  y como parametro le pasamos el # que tenga como evento una vez que se cargo la pagina 
+        
 
         //reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
         if('onhashchange' in window) {    //metodo, es así la configuación

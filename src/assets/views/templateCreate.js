@@ -4,8 +4,13 @@ import {createAccount} from './../js/auth.js';
 export const templateCreate = () => {
     //creamos div que contendrá la plantilla
     const containerCreate = document.createElement('div');
-    const contentCreate = `<p>Crear cuenta</p>
-                          <button id="create">Crear cuenta</button>`;
+    const contentCreate = `<h4>Registro Usuario</h4>
+                          
+                          <hr>
+                           <input id="emailR" type="email" placeholder="Ingresa email">
+                           <input id="passwordR" type="password" placeholder="Ingresa contraseña">
+                           <button id= "create">Ingresar</button>`;
+                         //aqui muestro el codigo para que se vea mi pantalla
     
     //pasar el contenido al div
     containerCreate.innerHTML = contentCreate;
@@ -18,4 +23,4 @@ export const templateCreate = () => {
     //solo 1 vista, la que va a tener el boton con google
     return containerCreate; 
     }
-    
+     
