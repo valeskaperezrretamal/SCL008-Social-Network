@@ -1,14 +1,38 @@
-.logo,.imagen{
+*{
+margin: 0%;
+padding: 0%;
+}
+.imagen{
 text-align: center;
+width: 100%;
 }
 body{
 background: rgb(158, 224, 158);
+width: 100%;
 }
     
 .logo,.login,.create,.container{
 text-align: center;
 }
-*{
-margin: 0%;
-padding: 0%;
+#idProfileImg {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    margin-right: 30px ;
 }
+#menu-bottom{
+    float: left;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: brown;
+}
+#menu-bottom li a{
+color: beige;
+font-size: 100px;
+}
+#menu-bottom li{
+    float: left;
+    margin-left: 5px;
+    }

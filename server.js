@@ -10,5 +10,5 @@ app.get('/',function(request, response){
 
 const port = process.env.PORT || 3000
 app.listen(port, function(){
-  console.log('Server Express Ready!');
+  console.log(`Server Express on Port: ${port} Ready!`);
 });
