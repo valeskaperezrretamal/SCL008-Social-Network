@@ -1,8 +1,12 @@
 .logo,.imagen{
 text-align: center;
 }
+#heading{
+    background-color:white;
+}
 body{
 background: rgb(158, 224, 158);
+text-align: center;
 }
     
 .logo,.login,.create,.container{

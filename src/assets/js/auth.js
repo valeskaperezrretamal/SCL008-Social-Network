@@ -1,22 +1,4 @@
 //autentificación firebase
-
-/*
-1- Crearemos dos funciones que silumarán el login con Google y la creación de cuenta
-*/
-//export para exportar la función
-export const loginGoogle = () => {
-    return 'Login con Google OK';
-}
-
-export const createAccount = () => {
-  return  firebase.auth().createUserWithEmailAndPassword(emailR, passwordR).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-  });;
-}
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyASsH_R0MR7LTLDQEoXFWjjbmLHpz5d790",
@@ -28,36 +10,22 @@ var config = {
 };
 firebase.initializeApp(config);
 
-export const acount = () => {
-    let mail = document.getElementById('email').value;
-    let password = document.getElementById('contrasena').value;
-    console.log(mail);
-    console.log(password);
-    firebase.auth().createUserWithEmailAndPassword(mail, password)
-    .catch(function(error) {
+/*
+1- Crearemos dos funciones que silumarán el login con Google y la creación de cuenta
+*/
+//export para exportar la función
+export const loginGoogle = () => {
+    return 'Login con Google OK';
+}
+
+export const createAccount = () => {
+    let email = document.getElementById('email').value;
+    let contrasena = document.getElementById('contrasena').value
+  return  firebase.auth().createUserWithEmailAndPassword(email, contrasena)
+  .catch(function(error) {
     // Handle Errors here.
-        var errorCode =alert (error.code);
-        var errorMessage = alert(error.message);
+    var errorCode = error.code;
+    var errorMessage = error.message;
     // ...
-  });
-
-}
-function registrar(){
-  var email = document.getElementById('emailR').value;
-  var password = document.getElementById('passwordR').value;
-}
-
-
-
-function login() {
-  var email = document.getElementById('emailI').value;
-  var password = document.getElementById('passwordI').value;
-
-  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-    });
-
+  });;
 }
