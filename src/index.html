@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script><!--libreria de firebase-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -33,9 +35,11 @@
     
     <div id="root"></div>
 
-    <script type="module" src= "./main.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-   
+  
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script><!--este es para la uatentificacion te ayuda de firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script><!--este es para los post, base de datos se saca de firebase-->
+    <script type="module" src= "./main.js"></script> 
 </body>
 </html>
 <!--http://localhost:3000 (para poder ver en la pagina, se óne este codigo en la terminal-->
