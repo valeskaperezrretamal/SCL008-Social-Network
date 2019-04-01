@@ -7,9 +7,9 @@ export const templateCreate = () => {
     const contentCreate = `<h4>Registro Usuario</h4>
                           
                           <hr>
-                           <input id="emailR" type="email" placeholder="Ingresa email">
-                           <input id="passwordR" type="password" placeholder="Ingresa contraseña">
-                           <button id= "create">Ingresar</button>`;
+                           <input id="email" type="email" placeholder="Ingresa email">
+                           <input id="contrasena" type="password" placeholder="Ingresa contraseña">
+                           <button id= "create">Registrar</button>`;
                          //aqui muestro el codigo para que se vea mi pantalla
     
     //pasar el contenido al div

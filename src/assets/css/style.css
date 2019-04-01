@@ -6,8 +6,12 @@ padding: 0%;
 text-align: center;
 width: 100%;
 }
+#heading{
+    background-color:white;
+}
 body{
 background: rgb(158, 224, 158);
+text-align: center;
 width: 100%;
 }
     

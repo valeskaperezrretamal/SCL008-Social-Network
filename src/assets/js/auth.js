@@ -1,4 +1,14 @@
 //autentificación firebase
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyASsH_R0MR7LTLDQEoXFWjjbmLHpz5d790",
+  authDomain: "bacan-network-s.firebaseapp.com",
+  databaseURL: "https://bacan-network-s.firebaseio.com",
+  projectId: "bacan-network-s",
+  storageBucket: "bacan-network-s.appspot.com",
+  messagingSenderId: "758434856794"
+};
+firebase.initializeApp(config);
 
 /*
 1- Crearemos dos funciones que silumarán el login con Google y la creación de cuenta
@@ -10,24 +20,16 @@ export const loginGoogle = () => {
 }
 
 export const createAccount = () => {
-  return  firebase.auth().createUserWithEmailAndPassword(emailR, passwordR).catch(function(error) {
+    let email = document.getElementById('email').value;
+    let contrasena = document.getElementById('contrasena').value
+  return  firebase.auth().createUserWithEmailAndPassword(email, contrasena) 
+  .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
   });;
 }
-
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyASsH_R0MR7LTLDQEoXFWjjbmLHpz5d790",
-  authDomain: "bacan-network-s.firebaseapp.com",
-  databaseURL: "https://bacan-network-s.firebaseio.com",
-  projectId: "bacan-network-s",
-  storageBucket: "bacan-network-s.appspot.com",
-  messagingSenderId: "758434856794"
-};
-firebase.initializeApp(config);
 
 export const acount = () => {
     let mail = document.getElementById('email').value;
@@ -47,9 +49,6 @@ function registrar(){
   var email = document.getElementById('emailR').value;
   var password = document.getElementById('passwordR').value;
 }
-
-
-
 function login() {
   var email = document.getElementById('emailI').value;
   var password = document.getElementById('passwordI').value;
