@@ -1,6 +1,6 @@
 //archivo 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 app.use(express.static(__dirname + '/src'));
 
@@ -8,6 +8,7 @@ app.get('/',function(request, response){
   response.sendFile(__dirname + '/index.html');
 });
 
-app.listen(3000, function(){
-  console.log('Server Express Ready!');
+const port = process.env.PORT || 3000
+app.listen(port, function(){
+  console.log(`Server Express on Port: ${port} Ready!`);
 });

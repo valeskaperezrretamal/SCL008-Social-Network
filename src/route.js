@@ -1,5 +1,7 @@
 import {templateLogin} from './assets/views/templateLogin.js';//aqui llamo los archivos
 import{templateCreate} from './assets/views/templateCreate.js';
+import{templateProfile} from './assets/views/templateProfile.js';
+import{templateArticles} from './assets/views/templateArticles.js';
 
 /*
 crear una función que reciba el hash (#) y segun el match o la cooincidencia retorne otra 
@@ -7,12 +9,10 @@ función que se va a encargar de imprimir el template en nuestro html
 */
 
 const changeRouter =(hash) => {
-    if(hash === '#/login'){
+    if(hash){
         return showTemplate(hash);
     }
-    if (hash == '#/create'){
-        return showTemplate(hash);
-    }
+ 
 }
 
 //imprimirá el template en html
@@ -29,6 +29,12 @@ switch (router){
     break;
     case 'create':
     containerRoot.appendChild(templateCreate());
+    break;
+    case 'profile':
+    containerRoot.appendChild(templateProfile());
+    break;
+    case 'articles':
+    containerRoot.appendChild(templateArticles());
     break;
     default:
     containerRoot.innerHTML = '<p>Error 404</p>'
