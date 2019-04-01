@@ -5,7 +5,8 @@
 */
 //export para exportar la función
 export const loginGoogle = () => {
-    return 'Login con Google OK';
+  console.log('Login con Google OK');
+    return login();
 }
 
 export const createAccount = () => {
@@ -60,4 +61,11 @@ function login() {
       // ...
     });
 
+}
+export const logout=()=>{
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+  }).catch(function(error) {
+    // An error happened.
+  });
 }
