@@ -21,7 +21,7 @@ export const loginGoogle = () => {
 export const createAccount = () => {
     let email = document.getElementById('email').value;
     let contrasena = document.getElementById('contrasena').value
-  return  firebase.auth().createUserWithEmailAndPassword(email, contrasena)
+  return  firebase.auth().createUserWithEmailAndPassword(email, contrasena) 
   .catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
