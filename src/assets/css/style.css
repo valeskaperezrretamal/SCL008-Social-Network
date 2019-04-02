@@ -8,12 +8,9 @@ width: 100%;
 }
 #heading{
     background-color:white;
+    display: inline-grid;
 }
-body{
-background: rgb(158, 224, 158);
-text-align: center;
-width: 100%;
-}
+
     
 .logo,.login,.create,.container{
 text-align: center;
@@ -39,4 +36,8 @@ font-size: 100px;
 #menu-bottom li{
     float: left;
     margin-left: 5px;
+    }
+    .green{
+        background-color: green;
+        height: 100px;
     }
