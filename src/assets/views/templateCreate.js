@@ -14,9 +14,11 @@ export const templateCreate = () => {
                            </div>
                            <div class="green"><h4>Registro Usuario</h4>
                            <ul id = "heading">
-                           
-                          <hr>
-                          <input id="nombre" type="text" placeholder="nombre Completo">
+                         <hr>
+                         
+                          <input id="nombre" type="text" placeholder="Nombre Completo">
+                          <input id="direccion" type="text" placeholder="Direccion Completa">
+                          <input id="ciudad" type="text" placeholder="Indica tu ciudad">
                            <input id="email" type="email" placeholder="Ingresa email">
                            <input id="contrasena" type="password" placeholder="Ingresa contraseña">
                            <button id= "create">Registrar</button>
