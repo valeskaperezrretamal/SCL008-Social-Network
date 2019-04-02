@@ -63,3 +63,8 @@ export const logout=()=>{
     // An error happened.
   });
 }
+//////////función de ejemplo para test////////////
+export const suma = (a,b) => {
+  return a+b;
+}
+//////////////////////////////////////////////////
