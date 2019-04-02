@@ -8,11 +8,13 @@ crear una función que reciba el hash (#) y segun el match o la cooincidencia re
 función que se va a encargar de imprimir el template en nuestro html
 */
 
-const changeRouter =(hash) => {
-    if(hash){
+const changeRouter =(hash) => {/*cambio de ruta/ hash es cortar(esta funcion devuelve el templete create o temple login */
+    if(hash === '#/login'){
         return showTemplate(hash);
     }
- 
+ if (hash === '#/create'){
+     return showTemplate(hash);
+ }
 }
 
 //imprimirá el template en html
@@ -45,6 +47,8 @@ switch (router){
 
  export const initRouter = () =>{ 
     window.addEventListener('load', changeRouter(window.location.hash));
+    const containerRoot = document.getElementById('root');
+    containerRoot.appendChild(templateLogin());
      // le pedimos que escuche una "carga" osea una vez que se carge  y como parametro le pasamos el # que tenga como evento una vez
      // que se cargo la pagina 
         
@@ -57,3 +61,4 @@ switch (router){
         }
                                           
 }
+//todo esto esta constantemente verificando la ruta//
