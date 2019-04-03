@@ -21,7 +21,7 @@ const contentLogin = `
                            </div>
                            <div class="green">
                            <ul id = "tabla">
-                                <li> <a >inicia sesion</a>  
+                                <li> <a href="#/inicioSesion" id="inicioSesion">inicia sesion</a>  
 
                                 </li>
                                <li>
@@ -36,6 +36,7 @@ const contentLogin = `
                                    
                                    <li><a href="#/profile">Mi perfil</a></li>
                                    <li><a href="#/articles">Temas de Interes</a></li>
+                                   
                            </ul>
                            </div>`;
 
