@@ -2,20 +2,25 @@ import {templateLogin} from './assets/views/templateLogin.js';//aqui llamo los a
 import{templateCreate} from './assets/views/templateCreate.js';
 import{templateProfile} from './assets/views/templateProfile.js';
 import{templateArticles} from './assets/views/templateArticles.js';
+import{templateMenuBottom} from './assets/views/templateMenu.js';
 
 /*
 crear una función que reciba el hash (#) y segun el match o la cooincidencia retorne otra 
 función que se va a encargar de imprimir el template en nuestro html
 */
-
+ 
 const changeRouter =(hash) => {/*cambio de ruta/ hash es cortar(esta funcion devuelve el templete create o temple login */
-    if(hash === '#/login'){
+    if(firebase.auth().currentUser){
+        templateMenuBottom();
+    };
+    
+    if(hash){
         return showTemplate(hash);
-    }
- if (hash === '#/create'){
-     return showTemplate(hash);
- }
-}
+    };
+   
+
+};
+
 
 //imprimirá el template en html
 const showTemplate = (hash) => {
