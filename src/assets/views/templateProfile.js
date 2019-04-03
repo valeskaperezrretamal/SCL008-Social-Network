@@ -2,6 +2,12 @@
 export const templateProfile = () => {
     //creamos div que contendrá la plantilla
     const container = document.createElement('div');
+    let fotourl;
+    if(!firebase.auth().currentUser.photoURL){   //
+        fotourl="https://cdn.memegenerator.es/descargar/25823245";
+    } else {
+        fotourl=firebase.auth().currentUser.photoURL;
+    };
     const content =`<ul id = "heading">
                     <div  class="logo">
                     <img src="assets/img/logo.png" style="width:250px" alt=""> 
@@ -10,10 +16,12 @@ export const templateProfile = () => {
                     <img src="assets/img/nutricion_gr.jpg" alt="">
                     </div>
                     <div class="green">
-                    <h1 id="idperfilnombre">juanito perez</h1>
-                    <img src="https://cdn.memegenerator.es/descargar/25823245" alt="" id="idProfileImg">
-                    <p id="iddescription">descripcion blalblalalalla</p> `
+                    <h1 id="idperfilnombre">${firebase.auth().currentUser.displayName}</h1> 
+                    <img src=${fotourl} alt="" id="idProfileImg">
+                    <p id="iddescription">descripcion blalblalalalla</p> `;
                     //aqui muestro el codigo para que se vea mi pantalla
+                    //$variable , para meter una variable dentro del string
+                    //acá se creó la función auth() para que aparezca el nombre del usuario que se logueo y se creo una imagen para mostar
     
                     //pasar el contenido al div
     container.innerHTML = content;
