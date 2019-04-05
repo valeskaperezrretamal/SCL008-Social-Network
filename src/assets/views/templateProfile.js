@@ -3,6 +3,7 @@ export const templateProfile = () => {
     //creamos div que contendrá la plantilla
     const container = document.createElement('div');
     let fotourl;
+    console.log(firebase.auth().currentUser)
     if(!firebase.auth().currentUser.photoURL){   //
         fotourl="https://cdn.memegenerator.es/descargar/25823245";
     } else {
