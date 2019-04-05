@@ -36,8 +36,16 @@ font-size: 100px;
 #menu-bottom li{
     float: left;
     margin-left: 5px;
-    }
-    .green{
-        background-color: green;
-        height: 200px;
-    }
+}
+.green{
+    background-color: green;
+    height: 200px;
+}
+#articlestitle h1{
+    text-align: center;
+    -webkit-text-fill-color: rgb(92, 187, 155);
+}
+#articlestitle p{
+    text-align: center;
+    padding: 20px;
+}
