@@ -54,3 +54,16 @@ font-size: 100px;
     padding: 10px 80px;
 }
 
+}
+.green{
+    background-color: green;
+    height: 200px;
+}
+#articlestitle h1{
+    text-align: center;
+    -webkit-text-fill-color: rgb(92, 187, 155);
+}
+#articlestitle p{
+    text-align: center;
+    padding: 20px;
+}

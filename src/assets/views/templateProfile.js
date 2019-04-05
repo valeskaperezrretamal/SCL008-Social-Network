@@ -3,6 +3,7 @@ export const templateProfile = () => {
     //creamos div que contendrá la plantilla
     const container = document.createElement('div');
     let fotourl;
+    console.log(firebase.auth().currentUser)
     if(!firebase.auth().currentUser.photoURL){   //
         fotourl="https://www.familias.com/wp-content/uploads/2015/08/featuredImageId59050-700x547.jpg";
     } else {
