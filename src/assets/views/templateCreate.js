@@ -1,4 +1,5 @@
 import {createAccount} from './../js/auth.js';
+import {emptyKey} from './../js/validation.js';
 
 
 export const templateCreate = () => {
@@ -19,21 +20,35 @@ export const templateCreate = () => {
                           <input id="nombre" type="text" placeholder="Nombre Completo">
                           <input id="direccion" type="text" placeholder="Direccion Completa">
                           <input id="ciudad" type="text" placeholder="Indica tu ciudad">
-                           <input id="email" type="email" placeholder="Ingresa email">
+                           
+                          <input id="email" type="email" placeholder="Ingresa email">
+                            <p id="erroremail"></p>
                            <input id="contrasena" type="password" placeholder="Ingresa contraseña">
+                           <p id= "errorpassword"></p>
                            <button id= "create">Registrar</button>
                            </div>`;
                          //aqui muestro el codigo para que se vea mi pantalla
     
     //pasar el contenido al div
+
     containerCreate.innerHTML = contentCreate;
-    const btn = containerCreate.querySelector('#create'); // que busque el id que tiene este #login, es pra que busque lo que yo quiero que busque, aun que no sea documento, hasta en hijoss
-    
-    //evento del botón que llama a la autentificación de google.
-    btn.addEventListener('click',() => {
-        createAccount();
-    })
+    containerCreate.querySelector('#create').addEventListener('click',() => {
+    let mail = document.getElementById('email').value;
+    let password = document.getElementById('contrasena').value;
+        
+        if(mail ===""){
+            document.getElementById("erroremail").innerHTML=`Debes ingresar un correo, no puede estar vacio este campo` //para pasar info. al html
+        
+        }
+        if(password===""){
+            document.getElementById("errorpassword").innerHTML=`Debes ingresar una contraseña, no puede estar vacio este campo`
+        }
+        if(emptyKey(mail,password)) createAccount(mail,password); 
+    });
+
     //solo 1 vista, la que va a tener el boton con google
     return containerCreate; 
     }
+    
+
      
