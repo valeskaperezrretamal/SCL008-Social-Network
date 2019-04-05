@@ -3,21 +3,28 @@ import{templateCreate} from './assets/views/templateCreate.js';
 import{templateProfile} from './assets/views/templateProfile.js';
 import{templateArticles} from './assets/views/templateArticles.js';
 import{templateMenuBottom} from './assets/views/templateMenu.js';
+import {loginGoogle, logout} from './assets/js/auth.js'; // es para ingresar al archivo js
+import{templateloginwithoutgoogle} from './assets/views/templateloginwithoutgoogle.js';
 
 /*
 crear una función que reciba el hash (#) y segun el match o la cooincidencia retorne otra 
 función que se va a encargar de imprimir el template en nuestro html
 */
  
-const changeRouter =(hash) => {/*cambio de ruta/ hash es cortar(esta funcion devuelve el templete create o temple login */
-    if(firebase.auth().currentUser){
-        templateMenuBottom();
-    };
-    
+const changeRouter =(hash) => {
+    templateMenuBottom();
+      
     if(hash){
         return showTemplate(hash);
-    };
-   
+    }else{
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                showTemplate("#/articles");
+            } else {
+                showTemplate("#/login");
+            }
+          });
+    }
 
 };
 
@@ -43,6 +50,16 @@ switch (router){
     case 'articles':
     containerRoot.appendChild(templateArticles());
     break;
+    case 'logingoogle':
+    loginGoogle();
+    containerRoot.appendChild(templateArticles());
+    break;
+    case 'loginwithoutgoogle':
+    containerRoot.appendChild(templateloginwithoutgoogle());
+    break;
+    case 'logout':
+    logout();
+    break;
     default:
     containerRoot.innerHTML = '<p>Error 404</p>'
     }
@@ -52,8 +69,15 @@ switch (router){
 
  export const initRouter = () =>{ 
     window.addEventListener('load', changeRouter(window.location.hash));
-    const containerRoot = document.getElementById('root');
-    containerRoot.appendChild(templateLogin());
+    
+     firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                showTemplate("#/articles");
+            } else {
+                showTemplate("#/login");
+            }
+          });
+  
      // le pedimos que escuche una "carga" osea una vez que se carge  y como parametro le pasamos el # que tenga como evento una vez
      // que se cargo la pagina 
         
