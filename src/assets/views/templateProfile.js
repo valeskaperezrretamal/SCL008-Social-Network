@@ -4,7 +4,7 @@ export const templateProfile = () => {
     const container = document.createElement('div');
     let fotourl;
     if(!firebase.auth().currentUser.photoURL){   //
-        fotourl="https://cdn.memegenerator.es/descargar/25823245";
+        fotourl="https://www.familias.com/wp-content/uploads/2015/08/featuredImageId59050-700x547.jpg";
     } else {
         fotourl=firebase.auth().currentUser.photoURL;
     };
@@ -18,17 +18,16 @@ export const templateProfile = () => {
                     <div class="green">
                     <h1 id="idperfilnombre">${firebase.auth().currentUser.displayName}</h1> 
                     <img src=${fotourl} alt="" id="idProfileImg">
-                    <p id="iddescription">descripcion blalblalalalla</p> `;
+                    <p>Lucila Julio Pizarro</p>
+                    <p id="iddescription">Ingeniera en Recursos Humanos,Altamente capacitada para gestionar, coordinar y participar en la administración del capital humano. Organizada, un alto desarrollo del sentido de la ética y la responsabilidad,Con Altos estándares de resultados.</p>
+                    <button id="fuera">salir</button>`;
                     //aqui muestro el codigo para que se vea mi pantalla
                     //$variable , para meter una variable dentro del string
                     //acá se creó la función auth() para que aparezca el nombre del usuario que se logueo y se creo una imagen para mostar
     
                     //pasar el contenido al div
-    container.innerHTML = content;
-    
-    
-
+    container.innerHTML = content;     
     //solo 1 vista, la que va a tener el boton con google
     return container; 
     }
-     
+    

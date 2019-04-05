@@ -4,6 +4,7 @@ import{templateProfile} from './assets/views/templateProfile.js';
 import{templateArticles} from './assets/views/templateArticles.js';
 import{templateMenuBottom} from './assets/views/templateMenu.js';
 
+
 /*
 crear una función que reciba el hash (#) y segun el match o la cooincidencia retorne otra 
 función que se va a encargar de imprimir el template en nuestro html

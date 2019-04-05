@@ -21,21 +21,21 @@ const contentLogin = `
                            </div>
                            <div class="green">
                            <ul id = "tabla">
-                                <li> <a href="#/inicioSesion" id="inicioSesion">inicia sesion</a>  
-
+                                <li> 
+                                <a href="#/inicioSesion" id="inicioSesion">inicia sesion</a>  
                                 </li>
-                               <li>
-                                   <a href="#/logingoogle" id="logingoogle">Ingreso Usuario con Google</a>
-                               </li>
-                               <li>
-                                   <a href="#/create">Registro Usuario</a>
-                               </li>
+                                <li>
+                                   <a  href="#/logingoogle" id="logingoogle">Ingreso Usuario con Google</a>
+                                </li>
+                                <li>
+                                   <a  href="#/create">Registro Usuario</a>
+                                </li>
                            </ul>
                            
                            <ul id="menu-bottom">
                                    
-                                   <li><a href="#/profile">Mi perfil</a></li>
-                                   <li><a href="#/articles">Temas de Interes</a></li>
+                                <li><a href="#/profile">Mi Perfil</a></li>
+                                <li><a href="#/articles">Noticias</a></li>
                                    
                            </ul>
                            </div>`;
