@@ -9,13 +9,13 @@ export const templateCreate = () => {
      
                            <div  class="logo">
                                <img src="assets/img/logo.png" style="width:250px" alt=""> 
-                               </div>
+                           ´</div>
                            <div class="imagen">
                                <img src="assets/img/nutricion_gr.jpg" alt="">
                            </div>
                            <div class="green"><h4>Registro Usuario</h4>
-                           <ul id = "heading">
-                         <hr>
+                               <ul id = "heading">
+                           <hr>
                          
                           <input id="nombre" type="text" placeholder="Nombre Completo">
                           <input id="direccion" type="text" placeholder="Direccion Completa">

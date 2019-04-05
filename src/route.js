@@ -6,6 +6,7 @@ import{templateMenuBottom} from './assets/views/templateMenu.js';
 import {loginGoogle, logout} from './assets/js/auth.js'; // es para ingresar al archivo js
 import{templateloginwithoutgoogle} from './assets/views/templateloginwithoutgoogle.js';
 
+
 /*
 crear una función que reciba el hash (#) y segun el match o la cooincidencia retorne otra 
 función que se va a encargar de imprimir el template en nuestro html

@@ -16,7 +16,8 @@ export const createAccount = (mail,password) => {
 //}
 export const loginGoogle =() => {
   var provider = new firebase.auth.GoogleAuthProvider();//(aparece en autentificacion de firebase)autenticar a tus usuarios con Firebase mediante sus cuentas de Google es manejar el flujo de acceso con Firebase/Crea una instancia del objeto del proveedor de Google
-  firebase.auth().signInWithPopup(provider).then(function(result) { 
+  firebase.auth().signInWithPopup(provider)
+  .then(function(result) { 
    // Esto te da un token de acceso de Google. Puedes usarlo para acceder a la API de Google.
     var token = result.credential.accessToken;
 // La información del usuario que ha iniciado sesión.

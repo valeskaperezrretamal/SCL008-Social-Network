@@ -5,6 +5,8 @@ padding: 0%;
 .imagen{
 text-align: center;
 width: 100%;
+height: 45%;
+
 }
 #heading{
     background-color:white;
@@ -26,6 +28,7 @@ text-align: center;
     float: left;
     width: 100%;
     position: fixed;
+    height: 70px;
     bottom: 0;
     background: brown;
 }
@@ -36,6 +39,21 @@ font-size: 100px;
 #menu-bottom li{
     float: left;
     margin-left: 5px;
+    }
+.green{
+    background-color: green;
+    height: 300px;
+    }
+#tabla{
+    text-align: center
+
+}
+#fuera{
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 10px 80px;
+}
+
 }
 .green{
     background-color: green;
