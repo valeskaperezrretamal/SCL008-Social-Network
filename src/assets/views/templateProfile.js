@@ -11,7 +11,7 @@ export const templateProfile = () => {
     };
     const content =`<ul id = "heading">
                     <div  class="logo">
-                    <img src="assets/img/logo.png" style="width:250px" alt=""> 
+                     <img src="assets/img/logo.png" style="width:250px" alt=""> 
                     </div>
                     <div class="imagen">
                     <img src="assets/img/nutricion_gr.jpg" alt="">
@@ -19,9 +19,7 @@ export const templateProfile = () => {
                     <div class="green">
                     <h1 id="idperfilnombre">${firebase.auth().currentUser.displayName}</h1> 
                     <img src=${fotourl} alt="" id="idProfileImg">
-                    <p>Lucila Julio Pizarro</p>
-                    <p id="iddescription">Ingeniera en Recursos Humanos,Altamente capacitada para gestionar, coordinar y participar en la administración del capital humano. Organizada, un alto desarrollo del sentido de la ética y la responsabilidad,Con Altos estándares de resultados.</p>
-                    <button id="fuera">salir</button>`;
+                    <p id="iddescription">descripcion blalblalalalla</p> `;
                     //aqui muestro el codigo para que se vea mi pantalla
                     //$variable , para meter una variable dentro del string
                     //acá se creó la función auth() para que aparezca el nombre del usuario que se logueo y se creo una imagen para mostar

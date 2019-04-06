@@ -15,11 +15,11 @@ import { suma,emptyKey } from './../src/assets/js/validation.js'
 
 
 //////////////ejemplo//////////////////////////////////
-describe('suma', () =>{
-    it ('deberia retornar 4 para la suma de 2+2',()=>{
-        expect(suma(2,2)).toBe(4)
-    })
-} );
+//describe('suma', () =>{
+   // it ('deberia retornar 4 para la suma de 2+2',()=>{
+       // expect(suma(2,2)).toBe(4)
+    //})
+//} );
 //////////////////////////////////////////////////////
 
 
