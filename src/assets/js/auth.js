@@ -1,18 +1,34 @@
 import {templateLogin} from './../views/templateLogin.js';
 
 export const createAccount = (name,address,city,mail,password) => {//te lo va a crear en el autentificacion
-    firebase.auth().createUserWithEmailAndPassword(name,address,city,mail, password)
+    firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(res => {
       console.log(res);
       // Aqui llamar funcion registrarUsuario(name, address, city, mail, password, res.uid);
+
     })
+    
     .catch(function(error) {// catch es agarrar(este agarra error)
     // maneja los errores aqui.
         var errorCode =alert (error.code);
         var errorMessage = alert(error.message);
        
   });
-
+  firebase.auth().onAuthStateChanged(function(user) { // escucha de quien se creo
+    if (user) {// si esta activo
+      firebase.database().ref('users/' + user.uid).set({
+        username: name, // aqui tu le das lo que quieres que te guarde en database
+        address:address,
+        city:city,
+        email: mail,
+       
+      });
+    }
+      // User is signed in.
+     else {
+      // No user is signed in.
+    }
+  });
 }
 
 /*function registrarUsuario(name, address, city, mail, password, uid){
