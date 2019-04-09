@@ -4,6 +4,7 @@ export const createAccount = (name,address,city,mail,password) => {//te lo va a 
     firebase.auth().createUserWithEmailAndPassword(mail, password)
     .then(res => {
       console.log(res);
+      // Aqui llamar funcion registrarUsuario(name, address, city, mail, password, res.uid);
     })
     .catch(function(error) {// catch es agarrar(este agarra error)
     // maneja los errores aqui.
@@ -13,10 +14,12 @@ export const createAccount = (name,address,city,mail,password) => {//te lo va a 
   });
 
 }
-//function registrar(){
-  //var email = document.getElementById('emailR').value;
- // var password = document.getElementById('passwordR').value;
-//}
+
+/*function registrarUsuario(name, address, city, mail, password, uid){
+  databaseRef = firebase.database().ref(); // referencia base de datos firebase
+  usersDatabaseRef = databaseRef.child("users");
+  usersDatabaseRed.push().set(uid, name, address...);
+} */
 export const loginGoogle =() => {
   var provider = new firebase.auth.GoogleAuthProvider();//(aparece en autentificacion de firebase)autenticar a tus usuarios con Firebase mediante sus cuentas de Google es manejar el flujo de acceso con Firebase/Crea una instancia del objeto del proveedor de Google
   firebase.auth().signInWithPopup(provider)
