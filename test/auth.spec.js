@@ -30,7 +30,7 @@ import { suma,emptyKey } from './../src/assets/js/validation.js'
 });
 */
 describe('emptyKey', () =>{
-    it('deberia retornar falso si es que no ingresa correo y contraseña',()=>{
-        expect(emptyKey("","")).toBe(false);
+    it('deberia retornar falso si es que no ingresa correo,contraseña,nombre,direccion,ciudad',()=>{
+        expect(emptyKey("","","","","")).toBe(false);
     })
 } );
