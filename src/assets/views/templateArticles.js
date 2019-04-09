@@ -22,6 +22,6 @@ export const templateArticles = () => {
         
          //solo 1 vista, la que va a tener el boton con google
          return container; 
-}            
+}              
     
    
