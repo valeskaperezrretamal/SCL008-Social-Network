@@ -20,7 +20,7 @@ export const createAccount = (name,address,city,mail,password) => {//te lo va a 
         username: name, // aqui tu le das lo que quieres que te guarde en database
         address:address,
         city:city,
-        email: mail,
+        email: mail, 
        
       });
     }
@@ -42,10 +42,20 @@ export const loginGoogle =() => {
   .then(function(result) { 
    // Esto te da un token de acceso de Google. Puedes usarlo para acceder a la API de Google.
     var token = result.credential.accessToken;
-// La información del usuario que ha iniciado sesión.
     var user = result.user;
-    // ...
-  }).catch(function(error) {
+    firebase.auth().onAuthStateChanged(function(user) { // escucha quien en google
+      if (user) {// si esta activo
+        firebase.database().ref('users/' + user.uid).set({
+          username: user.displayName,
+          email: user.email, 
+         
+        });
+      } 
+      else {
+
+      }
+})
+  .catch(function(error) {
    // Manejar los errores aquí.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -55,7 +65,9 @@ export const loginGoogle =() => {
     var credential = error.credential;
     // ...
   });
-}
+});
+};
+
 export const logout=()=>{
   firebase.auth().signOut().then(function() {
     document.getElementById('root').appendChild(templateLogin());
@@ -70,7 +82,7 @@ firebase.auth().signInWithEmailAndPassword(email, password)
     .catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
-  var errorMessage = error.message;
+    var errorMessage = error.message;
   if (errorCode === 'auth/wrong-password') {
     
   } else {
