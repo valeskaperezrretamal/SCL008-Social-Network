@@ -1,7 +1,7 @@
 import {templateLogin} from './../views/templateLogin.js';
 
 export const createAccount = (name,address,city,mail,password) => {//te lo va a crear en el autentificacion
-    firebase.auth().createUserWithEmailAndPassword(mail, password)
+    firebase.auth().createUserWithEmailAndPassword(name,address,city,mail, password)
     .then(res => {
       console.log(res);
       // Aqui llamar funcion registrarUsuario(name, address, city, mail, password, res.uid);
