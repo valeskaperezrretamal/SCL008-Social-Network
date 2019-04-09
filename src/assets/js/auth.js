@@ -1,7 +1,10 @@
 import {templateLogin} from './../views/templateLogin.js';
 
-export const createAccount = (mail,password) => {
+export const createAccount = (name,address,city,mail,password) => {//te lo va a crear en el autentificacion
     firebase.auth().createUserWithEmailAndPassword(mail, password)
+    .then(res => {
+      console.log(res);
+    })
     .catch(function(error) {// catch es agarrar(este agarra error)
     // maneja los errores aqui.
         var errorCode =alert (error.code);
