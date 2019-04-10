@@ -1,4 +1,4 @@
-//inicialización firebase
+//inicialización firebase api key
 //llamado a la inicialización de la rutas
 var config = {
   apiKey: "AIzaSyASsH_R0MR7LTLDQEoXFWjjbmLHpz5d790",
