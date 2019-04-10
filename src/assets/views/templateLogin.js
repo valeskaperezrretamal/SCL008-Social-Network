@@ -12,27 +12,16 @@ export const templateLogin = () => {
 //creamos div que contendrá en plantilla
 const containerLogin = document.createElement('div');
 const contentLogin = `
-                           <ul id = "heading">
-                           <div  class="logo">
-                               <img src="assets/img/logo.png" style="width:250px" alt=""> 
-                               </div>
-                           <div class="imagen">
-                               <img src="assets/img/nutricion_gr.jpg" alt="">
-                           </div>
-                           <div class="green">
-                           <ul id = "tabla">
-                                <li> <a href="#/loginwithoutgoogle">inicia sesion</a>  
-
-
-                                </li>
-                               <li>
-                                   <a href="#/logingoogle">Ingreso Usuario con Google</a>
-                               </li>
-                               <li>
-                                   <a href="#/create">Registro Usuario</a>
-                               </li>
-                           </ul>
                            
+                          
+                          
+                           <div class="green">
+                                <img src="assets/img/logo.png" alt=""> 
+                           <ul>
+                                <li> <a href="#/loginwithoutgoogle">inicia sesion</a> </li>
+                               <li> <a href="#/logingoogle"><img id="google" src="http://www.stickpng.com/assets/images/5a951939c4ffc33e8c148af2.png">Ingresa con Google</a> </li>
+                               <li><a href="#/create">Registro Usuario</a> </li>
+                           </ul>                       
                            
                            </div>`;
 

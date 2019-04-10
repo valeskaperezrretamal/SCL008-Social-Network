@@ -7,12 +7,7 @@ export const templateCreate = () => {
     const containerCreate = document.createElement('div');
     const contentCreate = `
      
-                           <div  class="logo">
-                               <img src="assets/img/logo.png" style="width:250px" alt=""> 
-                               </div>
-                           <div class="imagen">
-                               <img src="assets/img/nutricion_gr.jpg" alt="">
-                           </div>
+                           
                            <div class="green"><h4>Registro Usuario</h4>
                            <ul id = "heading">
                          <hr>

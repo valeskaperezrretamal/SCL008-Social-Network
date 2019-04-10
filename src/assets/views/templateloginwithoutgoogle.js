@@ -4,11 +4,10 @@ import {emptyKey} from './../js/validation.js';
 export const templateloginwithoutgoogle = () => {
     //creamos div que contendrá la plantilla
     const container = document.createElement('div');
-    const content =`<div id="iniciosesion">
-                    <input  type="text" id="email" placeholder="E-mail">
-                    <input  type="password" id="password" placeholder="Contraseña">
-                    <button id="login">ingresar</button>
-                    </div>`
+    const content =`   <div id="iniciosesion"  class="green"><img src="assets/img/logo.png" alt=""> 
+    <input  type="text" id="email" placeholder="E-mail">
+    <input  type="password" id="password" placeholder="Contraseña">
+    <button id="login">ingresar</button>`
     
                          //aqui muestro el codigo para que se vea mi pantalla
     

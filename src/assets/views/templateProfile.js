@@ -13,9 +13,7 @@ export const templateProfile = () => {
                     <div  class="logo">
                      <img src="assets/img/logo.png" style="width:250px" alt=""> 
                     </div>
-                    <div class="imagen">
-                    <img src="assets/img/nutricion_gr.jpg" alt="">
-                    </div>
+                   
                     <div class="green">
                     <h1 id="idperfilnombre">${firebase.auth().currentUser.displayName}</h1> 
                     <img src=${fotourl} alt="" id="idProfileImg">
