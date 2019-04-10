@@ -34,3 +34,8 @@ describe('emptyKey', () =>{
         expect(emptyKey("","","","","")).toBe(false);
     })
 } );
+export const validateEmail = (email) => {
+    //simula el patron del correo electronico
+    let pattern = /\S+@\S+.\S+/;
+    return pattern.test(email);
+}
