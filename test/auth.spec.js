@@ -35,7 +35,7 @@ describe('emptyKey', () =>{
     })
 } );
 export const validateEmail = (email) => {
-    //simula el patron del correo electronico
+    //simula el patron del correo electronico para que verifique que el correo sea correo 
     let pattern = /\S+@\S+.\S+/;
     return pattern.test(email);
 }

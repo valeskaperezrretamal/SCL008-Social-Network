@@ -5,7 +5,7 @@ export const templateProfile = () => {
     let fotourl;
     console.log(firebase.auth().currentUser)
     if(!firebase.auth().currentUser.photoURL){   
-        fotourl="https://www.familias.com/wp-content/uploads/2015/08/featuredImageId59050-700x547.jpg";
+        fotourl="https://images.vexels.com/media/users/3/147101/isolated/preview/b4a49d4b864c74bb73de63f080ad7930-bot--n-de-perfil-de-instagram-by-vexels.png";
     } else {
         fotourl=firebase.auth().currentUser.photoURL;
     };
@@ -17,7 +17,7 @@ export const templateProfile = () => {
                     <div class="green">
                     <h1 id="idperfilnombre">${firebase.auth().currentUser.displayName}</h1> 
                     <img src=${fotourl} alt="" id="idProfileImg">
-                    <p id="iddescription">descripcion blalblalalalla</p> `;
+                    <p id="iddescription">Estudiante de laboratoria</p> `;
                     //aqui muestro el codigo para que se vea mi pantalla
                     //$variable , para meter una variable dentro del string
                     //acá se creó la función auth() para que aparezca el nombre del usuario que se logueo y se creo una imagen para mostar
