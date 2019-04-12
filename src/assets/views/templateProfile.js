@@ -11,7 +11,7 @@ export const templateProfile = () => {
     };
     const content =`<ul id = "heading">
                     <div  class="logo">
-                     <img src="assets/img/logo.png" style="width:250px" alt=""> 
+                     <img src="assets/img/logo.png" alt=""> 
                     </div>
                    
                     <div class="green">
