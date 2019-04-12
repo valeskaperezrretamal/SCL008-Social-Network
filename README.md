@@ -1,7 +1,7 @@
 # Creando una Red Social
 
                                   ## Instasalud
- ![](logo.png)                                 
+ ![logo.png](./src/assets/img/logo.png)                                 
 ## Introduccion
 La insulina es el principal regulador de la homeostasis de la glucosa y los lípidos.
 La insulina disminuye las concentraciones de glucosa, la gluconeogénesis y la lisis de glucógeno en el hígado, así como favorece el ingreso de la glucosa al músculo estriado
@@ -69,9 +69,9 @@ https://trello.com/c/PcyFLK6S/2-historia-de-usuario-3
 
 ### Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
 
-![](prototipodebaja1.jpg)
-![](prototipodebaja2.jpg)
-![](prototipodebaja3.jpg)
+![prototipodebaja1.jpg](./src/assets/img/prototipodebaja1.jpg)
+![prototipodebaja2.jpg](./src/assets/img/prototipodebaja2.jpg)
+![prototipodebaja3.jpg](./src/assets/img/prototipodebaja3.jpg)
 
 
 ### Pruebas unitarias (unit tests)
